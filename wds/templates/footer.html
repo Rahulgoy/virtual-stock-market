@@ -1,0 +1,180 @@
+{% load static %}
+        <!-- ---------- FOOTER --------- -->
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,700;1,500&display=swap');
+    *{
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+
+    footer{
+      background: #232529;
+      width: 100vw;
+      height: 25vh;
+      /* padding: 20px; */
+    }  
+
+    footer .allcontent{
+      display: flex;
+      flex-flow: column;
+    }
+
+    .rows {
+      background: #232529;
+      display: flex;
+      flex-flow: row;
+      text-align: center;
+    }
+    .rows .cont {
+      width: 33.33%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rows .team{
+      margin: 0 auto;
+
+    }
+    .rows .team a{
+      color: #f5a976;
+    }
+    .rows .team a:hover{
+      color: #2e9aea;
+    }
+    /* ----------------------- logo and contact details ----------------------- */
+
+    
+    .econ-logo img{
+      height: 20vh;
+    }
+    
+    .cont .techSupport h5{
+        color: #FCAF58;
+        font-size: 2rem;
+        font-family: 'Spectral SC', serif;
+    }
+
+    /* ----------------------- Links ----------------------- */
+    .facebook{
+      background: #3b5998; 
+    }
+    .facebook:hover i{
+      color: #3b5998;
+      background: white;
+    }
+
+    .linkedin:hover i{
+      color: #0082ca;
+      background: white;
+    }
+    .youtube:hover i{
+      color: #ff0000;
+      background: white;
+      
+    }
+    .btn-instagram{
+      
+    }
+    .btn-instagram:hover i{
+      background: white;
+      
+    }
+    .btn-instagram:hover i{
+      color: #dc2c92;
+    }
+      @media (max-width:720px ){
+        footer{
+          height: 25vh;
+        }
+        footer .rows {
+          flex-flow: column;
+          padding: 0 20px;
+        }
+        footer .rows .cont{
+          width: 100%;
+          padding: 30px 0;
+          border-bottom: 1px solid #383b3f;
+        }
+
+        /* logo */
+        .econ-logo img{
+          height: 30vh;
+        }
+        
+        .rows .team{
+          padding: 20px;
+        }
+      }
+
+
+
+
+  </style>
+
+</head>
+
+
+
+
+
+<!-- Footer -->
+<footer>
+  
+  <div class="allcontent">
+    <div class="rows">
+      <div class="econ-logo cont">
+        <a href="https://sites.google.com/view/econclub/about?authuser=0/"><img src="{% static 'images-2019/econ-logo.png' %}" class=" "></a>
+      </div>
+      
+        <!-- Social buttons -->
+      <div class="cont">
+          <ul class="">
+            <li class="list-inline-item">
+              <a class="btn-floating mx-1 facebook" href="https://www.facebook.com/econthapar" style="background: #3b5998; ">
+                <i class="fa fa-facebook-f"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-youtube mx-1 youtube" href="https://www.youtube.com/channel/UCnyVX3sGVJEno_WwLouHXtA" style="background: #ff0000;">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-li mx-1 linkedin" href="https://www.linkedin.com/company/econclub/" style="background: #0082ca;">
+                <i class="fab fa-linkedin-in"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/econ_tiet/"  class="btn-floating btn-instagram mx-1 instagram" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);">
+                <i class="fab fa-instagram"> </i>
+              </a>
+            </li>
+          </ul> 
+
+      </div> 
+
+      <div class="cont">
+        <div class="techSupport" >
+          <h5 class="">Technical Support</h5>
+          <ul class="">
+            <li> +91 9877184936</li>
+            <li> +91 9958141502</li>
+          </ul>
+        </div>
+      </div>  
+
+  </div>
+
+
+
+  <div class="rows">
+    <div class="team">
+      <a href="https://sites.google.com/view/econclub/about?authuser=0/" style="font-family: 'Cardo', serif;">&copy; DEVELOPED BY TEAM ECON</a>
+    </div>
+  </div>
+</div>
+</footer>
+<!-- Footer -->

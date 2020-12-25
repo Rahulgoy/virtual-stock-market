@@ -1,0 +1,111 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block regis %}
+
+
+<style>
+  @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+    background-image: url("{% static 'images-2019/bg-11.jpg' %}");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+    font:16px/1.6 Arial,  sans-serif;
+}
+
+.background-transparent {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.top-nav ul li a{
+    color: #fff;
+    font-size: 1.35rem;
+}
+.form-field{
+  height:3.5rem !important;
+}
+.btn {
+  background-color: #FCAF58;
+}
+.main-form{
+  box-shadow: 2px 10px 40px rgba(224, 137, 74,0.5);
+}
+.form-heading{
+    text-align: center;
+    width: 100%;
+}
+.form-heading h2{
+  font-size: 2.5rem;
+  font-family: 'Spectral SC', serif;
+}
+
+form button{
+            color: black;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            border-radius: 15px;
+            border: none;
+            background:#FCAF58;
+        }
+        form button:hover{
+            background: #fcaf58bb;
+        }
+        form button:active{
+            background: #FCAF58;
+            
+        }
+
+</style>
+<body>
+    <!-- HEADER -->
+    <header role="banner" class="position-absolute">
+  {% include "navbar.html" %}
+
+    </header>
+  <section>
+
+    <div class="container-fluid col-xl-5" style="padding:7px; ">
+      <div class="row main-form">
+          <div class="form-heading">
+              <h2>Register</h2>
+          </div>
+     
+         <form class="col s12" method="POST">
+            {% csrf_token %}
+          <div class="row">
+              <div class="input-field col s12 form-field">
+                  <input  id="first_name" type="text" class="validate form-field"  name="username">
+                  <label for="Username">User Name</label>
+              </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 form-field">
+                <input  id="email" type="email" class="validate form-field"  name="email">
+                <label for="email">Email</label>
+            </div>
+        </div>
+          <div class="row">
+              <div class="input-field col s12 form-field">
+                  <input id="password" type="password" class="validate form-field" name="password">
+                  <label for="Password">Password</label>
+              </div>
+          </div>      
+          <button class="" type="submit" name="action">Register
+              <i class="material-icons right"></i>
+          </button>
+          </form>
+      </div>
+    </div>
+  </section>
+</body>
+{% endblock %}

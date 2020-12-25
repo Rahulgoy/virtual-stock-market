@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+      body{
+    background: #00000f;
+    font:16px/1.6 Arial,  sans-serif;
+    }
+    .main-page{
+            display: flex;
+            margin-bottom: 100px;
+            padding-bottom: 100px;
+            
+        }
+
+    
+    .cs{
+      color: #FCAF58;
+      font-size: 40px;
+      text-align: center;
+    }
+
+        /*  ------------------------ TABLE ------------------------  */
+
+        th, table tr:nth-of-type(2n){
+      border: none;
+      background: transparent;
+  }
+  
+  th, table tr:nth-of-type(2n) td{
+      border: none;
+      background: transparent;
+  }
+
+        /* ---------- table section ---------- */
+    .table-section{
+        width: 100%;
+        height: 120vh;
+    
+    }
+        /* ---------- table heading ---------- */
+    .table-section h1{
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #FCAF58;
+        font-family: 'Sanchez', serif;
+    }
+
+        /* -------------- table -------------- */
+    .table-section table{
+        border: none;
+        background: #8953b036;
+    }
+
+    .table-section table thead {
+    font-family: 'Sanchez', serif;
+      height: 70px;
+      background: none;
+      border: none;
+      background-image: linear-gradient(to right, #46317796, #29718398);
+      border-bottom: 2px solid #fff;
+    }
+
+    .table-section thead th{
+      font-size: 1.2rem;
+      text-align: center;
+      height: 50px;
+      z-index: 10;
+      color: white;
+  }
+
+  .table-section tbody td{
+    font-family: 'Sanchez', serif;
+      text-align: center;
+      font-size: 1.3rem;
+      margin-right: 1px;
+      padding-right: 10px;
+      color: white;
+      z-index: 10;
+      text-transform: capitalize;
+  }
+
+
+@media (max-width: 720px ) {
+
+    .table-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .table-section table thead{
+        height: 30px;
+        font-size: 1rem;
+    }
+    .table-section tbody td {
+    text-align: center;
+    font-size: 12px;
+    margin-right: 1px;
+    padding-right: 7px;
+    color: white;
+    text-transform: capitalize;
+}
+    
+    footer{
+        margin-top: 50px;
+    }
+    
+}
+
+
+
+    
+    </style>
+</head>
+<body>
+    <header role="banner" class="position-absolute">
+      <!-- Top Navigation -->
+    {% include "navbar.html" %}
+  </header>
+
+  <!-- ---------  nav-carousel -------- -->
+  <div class="carousel-default owl-carousel carousel-main carousel-nav-white nav-carosel-height">
+    <div class="item">
+        <div class="s-12 center">
+            <!-- For ZOOM effect add classes "background-image-zoom-out" or "background-image-zoom-in" -->
+            <div class="section text-center background-image-zoom-out">
+                <!-- ZOOMED Carousel Image -->
+                <div class="background-image background-image-object" style="background-image:url({% static 'images-2019/bg-11.jpg'%})"></div>
+                <div class="background-image background-image-object" ></div>
+
+                <div class="line" style="visibility: hidden;">
+                    <hr class="animated-carousel-element break background-primary break-small break-center margin-top-130">
+                    <p class="text-extra-thin animated-carousel-element text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-0">
+                        
+                    </p>
+                    <hr class="animated-carousel-element break background-primary break-small break-center">
+                    <!-- <p class="animated-carousel-element slow text-white margin-top-40"></p> -->
+                </div>
+                <!-- Pie Charts -->
+              
+            </div>
+        </div>
+        <!-- white full width arrow object -->
+        <!-- <img class="arrow-object" src="{% static 'img/arrow-object-white.svg'%}" alt=""> -->
+    </div>
+</div>
+
+
+
+
+    
+      &nbsp;
+
+    <section class="main-page">
+
+      <div class="table-section">
+
+        <h1>Stock Market</h1>
+            <table>
+                  <thead>
+                  <tr>
+                      <th>Stock Initials</th>
+                      <th>Stock Name</th>
+                      <th>Current Price</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                    {% for post in posts %}
+                <tr>            
+                    <td>{{ post.stockattribute }}</td>
+                    <td>{{ post.stockname }}</td>
+                    <td>{{ post.stockprice }}</td>                  
+                </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+      </div>
+  
+  </section>
+  {% include "footer.html" %}
+</body>
+{% endblock %}

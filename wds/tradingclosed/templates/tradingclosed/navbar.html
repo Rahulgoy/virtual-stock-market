@@ -1,0 +1,87 @@
+{% load static %}
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,700;1,500&display=swap');
+
+
+    nav.fixed .logo-dark, .fixed nav .logo-dark {
+    display: block;
+    width: 100px;
+    top: 10px;
+}
+    .top-nav a {
+        font-family: 'Spectral SC', serif;
+    }
+
+</style>
+</head>
+        <nav class="background-transparent background-dark-dott full-width sticky">
+            <!-- mobile version logo -->
+            <div class="logo hide-l hide-xl hide-xxl">
+                <a href="index.html" class="logo">
+                    <!-- Logo Dark Version -->
+                    <img class="logo-dark" src="{% static 'images-2019/WDS_Logo_Black.png'%}" alt="">
+                </a>
+            </div>
+            <div class="top-nav">
+
+                <!-- left menu items -->
+                <div class="top-nav left-menu">
+                    <ul class="right top-ul chevron">
+                        <li class="active-item">
+                        {% csrf_token %}
+                        {% if user.is_staff %}
+                        <a href="{% url 'admin:index' %}">&nbsp Admin </a>
+                        {% endif %}
+                        </li>
+                        <li>
+                            <a href="{% url 'tradingclosed:home' %}">Home</a>
+                        </li>
+                        <li>
+                        
+                        <a href="{% url 'tradingclosed:trading-closed' %}" style="font-family: 'Spectral SC', serif;">&nbsp Stocks</a>
+                        
+                        </li>
+                       
+                    </ul>
+                </div>
+
+                <!-- logo -->
+                <ul class="logo-menu">
+                    
+                <a href="#" class="logo">
+                
+                        <!-- Logo White Version -->
+                        <img class="logo-white" src="{% static 'images-2019/WDS_Logo_Black.png'%}" alt="">
+                        <!-- Logo Dark Version -->
+                        <img class="logo-dark" src="{% static 'images-2019/WDS_Logo_Black.png'%}" alt="">
+                        
+                    </a>
+                </ul>
+                
+                <!-- right menu items -->
+                <div class="top-nav right-menu">
+                    <ul class="top-ul chevron">
+                        
+                        {% if user.is_authenticated %}
+                        {% comment %}
+                        <li><a href="{% url 'tradingclosed:trading-closed' %}">&nbsp News</a></li>
+                        {% endcomment %}
+                        <li><a href="{% url 'tradingclosed:news' %}">&nbsp News</a></li>
+                       
+                        <li><a href="{% url 'tradingclosed:trading-closed' %}">&nbsp Dashboard</a></li>
+                        <li><a href="{% url 'tradingclosed:userlogout' %}">&nbsp Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'tradingclosed:trading-closed' %}">&nbsp News</a></li>
+                        <li><a href="{% url 'tradingclosed:userlogin' %}">&nbsp Login</a></li>
+                        
+                        {% endif %}
+                        
+                        
+                                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+

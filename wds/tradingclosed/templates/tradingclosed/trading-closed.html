@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Teko:700&display=swap" rel="stylesheet">
+
+    <title>
+        Trading closed
+    </title>
+
+<style>
+
+
+body {
+    background-image: url("{% static './images-2019/close6.jpg'%}");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #4dbc56;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+    h1 {
+    margin:0;
+    padding-bottom: 6rem;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+    font-size: 10rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+  }
+.container{
+    margin-top: 200px;
+}
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #2da96f;
+    }
+    to {
+      text-shadow: 0 0 30px #34c17f, 0 0 10px #4dc79e;
+    }
+  }
+
+</style>
+    <body>
+        <div class="container">
+            <h1><span class='one'>t</span><span class='two'>r</span><span class='three'>a</span><span class='four'>d</span><span class='five'>i</span><span class='six'>n</span><span class='six'>g</span> <span class='six'>c</span><span class='six'>l</span><span class='six'>o</span><span class='six'>s</span><span class='six'>e</span><span class='six'>d</span></h1>
+
+        </div>
+
+    </body>
+
+</html>
