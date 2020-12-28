@@ -125,8 +125,8 @@
   
   
   .stock-table{
-      width: 60%;
-      margin-left: 10%;
+      width: 90%;
+      margin: 0 10% 10% 10%;
       height: 110vh;
       margin-bottom: 30px;
       
@@ -168,10 +168,6 @@
       color: white;
   }
 
-  
-  .stockTableInsider tbody{
-
-  }
   
   .stockTableInsider tbody tr{
       color: white;
@@ -241,7 +237,7 @@
 
 
   
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
 
     .mainpage{
       display: block;
@@ -277,11 +273,6 @@
   
       main{
           margin-top: 50px;
-
-          
-      }
-      .stock-table table thead{
-        height: 520px;
       }
   }
       </style>    
@@ -487,93 +478,7 @@
                   <td>{{dd.ICICIPRULI}}</td>
                 </tr>
                 {% endfor %}
-              
-                <!-- INTERNATIONAL-->
-              
-                {% comment %}
-              {% for dd in dashdata %}
-              <tr class="tablerow">
-                <td>JPM</td>
-                <td>{{dd.JPM}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>ATT</td>
-                <td>{{dd.ATT}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>CCA</td>
-                <td>{{dd.CCA}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>WMT</td>
-                <td>{{dd.WMT}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>AER</td>
-                <td>{{dd.AER}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>BOE</td>
-                <td>{{dd.BOE}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>PFZ</td>
-                <td>{{dd.PFZ}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>FBI</td>
-                <td>{{dd.FBI}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>ZVC</td>
-                <td>{{dd.ZVC}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>PAP</td>
-                <td>{{dd.PAP}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>TXT</td>
-                <td>{{dd.TXT}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>GMS</td>
-                <td>{{dd.GMS}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>APL</td>
-                <td>{{dd.APL}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>TES</td>
-                <td>{{dd.TES}}</td>
-              </tr>
-              <tr class="tablerow">
-                <td>INT</td>
-                <td>{{dd.INT}}</td>
-              </tr>
-              
-              
-              {% endfor %}
 
-
-
-
-
-
-
-
-
-              {% endcomment %}
-              
-              
-              
-              
-              
-              
-              
-              
-              
               </tbody>
             </table>
           

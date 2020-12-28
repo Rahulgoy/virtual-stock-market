@@ -270,8 +270,11 @@
 		margin: 0 auto;
 		width: 70%;
 	}
+	table{
+		margin: 0 10% 10% 10% 10%;
+	}
     .table-section thead th {
-		font-size: 1rem;
+		font-size: 0.7rem;
 		text-align: center;
 		height: 30px;
 		color: white;
@@ -318,7 +321,7 @@
 	</a>
 	
   <div class="collapse" id="collapseExample">
-	<div class="">
+
 	  <div class="side-bar-wrapper-acc">
 
 		<div class="requestButtons">
@@ -331,21 +334,12 @@
 			<div class="req-btn"><a class="btn-insider" href="{% url 'core:transaction-history' %}">Sent Requests Status</a></div>
 			<div class="req-btn"><a class="btn-insider" href="{% url 'core:transaction-log' %}">Transactions</a></div>
 			<div class="req-btn"><a class="btn-insider" href="{% url 'core:report' %}">Report(Insider Trading)</a></div>
-			{% comment  %}
-			<div class="req-btn"><a class="btn-insider" href="{% url 'international:dashboard' %}">Dashboard</a></div>
-			<div class="req-btn"><a class="btn-insider" href="{% url 'international:sentreq' %}">Requests Sent</a></div>
-			<div class="req-btn"><a class="btn-insider" href="{% url 'international:receivedreq' %}">Received Requests</a></div>
-			<div class="req-btn"><a class="btn-insider" href="{% url 'international:createrequest' %}">Create Trade Request</a></div>
-			<div class="req-btn"><a class="btn-insider" href="{% url 'international:transaction-history' %}">Sent Requests Status</a></div>
-			<div class="req-btn"><a class="btn-insider" href="{% url 'international:transaction-log' %}">Transactions</a></div>
-			<div class="req-btn"><a class="btn-insider" href="{% url 'international:report' %}">Report(Insider Trading)</a></div>
-			{% endcomment %}
 			
 			<div class="req-btn"><a class="btn-insider" href="https://unh.zoom.us/j/95053387491?pwd=aTZ6d0xUOGlSTXBwQUxBVWJ6WHBudz09">Insider Trading</a></div>
 		</div>
 	  
   </div>
-	</div>
+
   </div>
 
 
@@ -375,15 +369,6 @@
                 <div class="req-btn"><a class="btn-insider" href="{% url 'core:transaction-history' %}">Sent Requests Status</a></div>
                 <div class="req-btn"><a class="btn-insider" href="{% url 'core:transaction-log' %}">Transactions</a></div>
                 <div class="req-btn"><a class="btn-insider" href="{% url 'core:report' %}">Report (Insider Trading)</a></div>
-                {% comment  %}
-                <div class="req-btn"><a class="btn-insider" href="{% url 'international:dashboard' %}">Dashboard</a></div>
-                <div class="req-btn"><a class="btn-insider" href="{% url 'international:sentreq' %}">Requests Sent</a></div>
-                <div class="req-btn"><a class="btn-insider" href="{% url 'international:receivedreq' %}">Received Requests</a></div>
-                <div class="req-btn"><a class="btn-insider" href="{% url 'international:createrequest' %}">Create Trade Request</a></div>
-                <div class="req-btn"><a class="btn-insider" href="{% url 'international:transaction-history' %}">Sent Requests Status</a></div>
-                <div class="req-btn"><a class="btn-insider" href="{% url 'international:transaction-log' %}">Transactions</a></div>
-                <div class="req-btn"><a class="btn-insider" href="{% url 'international:report' %}">Report (Insider Trading)</a></div>
-                {% endcomment %}
                 
                 <div class="req-btn"><a class="btn-insider" href="https://unh.zoom.us/j/95053387491?pwd=aTZ6d0xUOGlSTXBwQUxBVWJ6WHBudz09">Insider Trading</a></div>
             </div>

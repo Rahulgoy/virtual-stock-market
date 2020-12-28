@@ -72,11 +72,11 @@
                     <ul class="top-ul chevron">
                         
                         {% if user.is_authenticated %}
-                        <li><a href="{% url 'core:news' %}">&nbsp News</a></li>
+                        
                         <li><a href="{% url 'core:dashboard' %}">&nbsp Dashboard</a></li>
                         <li><a href="{% url 'core:userlogout' %}">&nbsp Logout</a></li>
                         {% else %}
-                        <li><a href="{% url 'core:news' %}">&nbsp News</a></li>
+                        
                         <li><a href="{% url 'core:userlogin' %}">&nbsp Login</a></li>
                         <li><a href="{%url 'core:register' %}">&nbsp Register</a></li>
                         {% endif %}
@@ -88,4 +88,3 @@
             </div>
         </nav>
         
-
