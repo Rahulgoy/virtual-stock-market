@@ -155,3 +155,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 LOGIN_REDIRECT_URL = 'home'
 #BASE_URL = "http://127.0.0.1:8000"
 LOGIN_URL = '/templates/userlogin.html'
+LOGOUT_URL = 'home'

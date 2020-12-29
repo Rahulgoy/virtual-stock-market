@@ -133,18 +133,10 @@
             </p>
             
         {% if user.is_authenticated %}
-        <a href="{% url 'core:dashboard' %}" class="s-12 m-6 l-3 center text-size-20 margin-top-60 text-white btn-enter-wds">Enter WDS</a>
+        <a href="{% url 'core:dashboard' %}" class="s-12 m-6 l-3 center text-size-20 margin-top-60 text-white btn-enter-wds">Enter Dashboard</a>
         {% else %}
-        <a href="{% url 'core:userlogin' %}" class="s-12 m-6 l-3 center text-size-20 margin-top-60 text-white btn-enter-wds">Enter WDS</a>
+        <a href="{% url 'core:userlogin' %}" class="s-12 m-6 l-3 center text-size-20 margin-top-60 text-white btn-enter-wds">Enter Dashboard</a>
         {% endif %}
-        {% comment  %}
-        {% if user.is_authenticated %}
-        <a href="{% url 'international:dashboard' %}" class="s-12 m-6 l-3 center text-size-20 margin-top-60 text-white btn-enter-wds">Enter WDS</a>
-        {% else %}
-        <a href="{% url 'international:userlogin' %}" class="s-12 m-6 l-3 center text-size-20 margin-top-60 text-white btn-enter-wds">Enter WDS</a>
-        {% endif %}
-        {% endcomment %}
-
 
         <div class="rules-btn">
             <a href="https://drive.google.com/file/d/1U1O9yaAWVwK1XZc2LzHZ0roBRDJUXFXY/view" class="s-12 m-6 l-3 center text-size-20 text-white btn-rules-wds rules-1">Rulebook</a>

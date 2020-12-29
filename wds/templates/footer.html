@@ -10,8 +10,11 @@
       box-sizing: border-box;
     }
 
+    ul li{
+      list-style-type: none;
+    }
     footer{
-      background: #232529;
+      background: #2d2f33;
       width: 100vw;
       height: 25vh;
       /* padding: 20px; */
@@ -21,9 +24,17 @@
       display: flex;
       flex-flow: column;
     }
-
+    .footer-heading{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .footer-heading h3{
+      color: #fd5949;
+    }
     .rows {
-      background: #232529;
+      background: #2d2f33;
       display: flex;
       flex-flow: row;
       text-align: center;
@@ -39,45 +50,60 @@
 
     }
     .rows .team a{
-      color: #f5a976;
+      color: #ca6960;
     }
     .rows .team a:hover{
-      color: #2e9aea;
+      color: #fd5949;
     }
-    /* ----------------------- logo and contact details ----------------------- */
+    /* ----------------------------------------------------- */
 
-    
-    .econ-logo img{
-      height: 20vh;
+    .name{
+      display: flex;
+      flex-direction: column;
     }
-    
-    .cont .techSupport h5{
-        color: #FCAF58;
+    .name h5{
+      color: #da665c;
         font-size: 2rem;
         font-family: 'Spectral SC', serif;
+      
+    }
+    .name-social .cont{
+      display: inline;
     }
 
-    /* ----------------------- Links ----------------------- */
-    .facebook{
-      background: #3b5998; 
+    .Dev-contact{
+        font-size: 1.2rem;        
     }
-    .facebook:hover i{
-      color: #3b5998;
+
+
+    /* ----------------------- social icons ----------------------- */
+
+    .middle-social{
+      visibility: hidden;
+    }
+
+    .github{
+      background: #000; 
+    }
+    .github:hover i{
+      color: #000;
       background: white;
+    }
+    .mail{
+      background-color: #ea4335;
+    }
+    .mail:hover{
+      background: white;
+    }
+    .mail:hover i{
+      color: #ea4335;
     }
 
     .linkedin:hover i{
       color: #0082ca;
       background: white;
     }
-    .youtube:hover i{
-      color: #ff0000;
-      background: white;
-      
-    }
-    .btn-instagram{
-      
-    }
+
     .btn-instagram:hover i{
       background: white;
       
@@ -85,6 +111,23 @@
     .btn-instagram:hover i{
       color: #dc2c92;
     }
+    
+    .github:visited{
+      background-color: #000;
+    }
+    .linkedin:visited {
+      background: #0082ca;
+    }
+    .btn-instagram:visited{
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+    .mail:visited{
+      background: white;
+    }
+    .btn-floating i{
+      font-size: 1.5rem;
+    }
+
       @media (max-width:720px ){
         footer{
           height: 25vh;
@@ -96,14 +139,16 @@
         footer .rows .cont{
           width: 100%;
           padding: 30px 0;
-          border-bottom: 1px solid #383b3f;
         }
 
         /* logo */
-        .econ-logo img{
-          height: 30vh;
+
+        .middle{
+          display: none;
         }
-        
+        .middle-social{
+          display: none;
+        }
         .rows .team{
           padding: 20px;
         }
@@ -122,16 +167,53 @@
 
 <!-- Footer -->
 <footer>
-  
+  <div  class="col-xs-12 col-sm-8  col-md-8 col-lg-8 footer-heading" style="text-align: center;">
+    <h3 style="font-family: 'Spectral SC', serif;">Developer's Info</h3>
+  </div>
+
+
   <div class="allcontent">
     <div class="rows">
-      <div class="econ-logo cont">
-        <a href="https://sites.google.com/view/econclub/about?authuser=0/"><img src="{% static 'images-2019/econ-logo.png' %}" class=" "></a>
+      <div class="cont name">
+
+        <!-- --------- Rahul Goyal --------- -->
+        <div class="heading">
+          <h5>Rahul Goyal</h5>
+        </div>
+
+        <div class="name-social social">
+          <div class="cont">
+            <ul class="">
+              <li class="list-inline-item">
+                <a class="btn-floating mx-1 github" href="https://github.com/Rahulgoy" target="blank" >
+                  <i class="fab fa-github"> </i>
+                </a>
+              </li>
+
+              <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1 linkedin" href="https://www.linkedin.com/in/rahulgoy/" style="background: #0082ca;" target="blank">
+                  <i class="fab fa-linkedin-in"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/rahulkugo/"  class="btn-floating btn-instagram mx-1 instagram" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);  font-size: 1.7rem;" target="blank">
+                  <i class="fab fa-instagram"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:rahulkumargoyal00@gmail.com " class="btn-floating btn-li mx-1 mail" target="blank">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+            </ul> 
+  
+          </div> 
+        </div>
       </div>
       
-        <!-- Social buttons -->
-      <div class="cont">
-          <ul class="">
+        <!-- Social buttons Hidden -->
+      <div class="cont middle">
+          <ul class="middle-social">
             <li class="list-inline-item">
               <a class="btn-floating mx-1 facebook" href="https://www.facebook.com/econthapar" style="background: #3b5998; ">
                 <i class="fa fa-facebook-f"> </i>
@@ -156,13 +238,41 @@
 
       </div> 
 
-      <div class="cont">
-        <div class="techSupport" >
-          <h5 class="">Technical Support</h5>
-          <ul class="">
-            <li> +91 9877184936</li>
-            <li> +91 9958141502</li>
-          </ul>
+        <!-- --------- Nipun Verma --------- -->
+      <div class="cont name">
+
+        <div class="heading">
+          <h5>Nipun Verma</h5>
+        </div>
+
+        <div class="name-social social">
+          <div class="cont">
+            <ul class="">
+
+              <li class="list-inline-item">
+                <a class="btn-floating mx-1 github" href="https://github.com/nipun3120" target="blank" >
+                  <i class="fab fa-github"> </i>
+                </a>
+              </li>
+
+              <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1 linkedin" href="https://www.linkedin.com/in/nipun-verma-4885201a5/" style="background: #0082ca;" target="blank">
+                  <i class="fab fa-linkedin-in"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/nipun3120/"  class="btn-floating btn-instagram mx-1 instagram" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); font-size: 1.7rem;" target="blank">
+                  <i class="fab fa-instagram"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:nipunverma39@gmail.com " class="btn-floating btn-li mx-1 mail" target="blank">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+            </ul> 
+
+          </div> 
         </div>
       </div>  
 
@@ -172,7 +282,7 @@
 
   <div class="rows">
     <div class="team">
-      <a href="https://sites.google.com/view/econclub/about?authuser=0/" style="font-family: 'Cardo', serif;">&copy; DEVELOPED BY TEAM ECON</a>
+      <a href="https://github.com/Rahulgoy/virtual-stock-market" style="font-family: 'Cardo', serif;">&copy; COPYRIGHT 2020</a>
     </div>
   </div>
 </div>
